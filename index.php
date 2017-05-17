@@ -16,11 +16,19 @@
          * Time: 16:29
          */
 
+            include_once("class/TesteExcecao.php");
+
+            $teste = new TesteExcecao();
+
+            echo $teste->fazCalculo(2,3);
+
             echo "<h1>Testando a performance em lançamento de exceções</h1>";
             echo "<p>Usando a comparação entre números pares e ímpares fazemos o sistema lançar uma execeção sempre que
                      o valor verificado não for par. Comparamos dois parâmetros, o uso de memória e o tempo gasto para
                      realizar o processamento.
                   </p>";
+
+        /*
             //Testando com o lançamento de exceções
             $InicialTime = microtime(TRUE);
             $InicialMem = memory_get_usage();
@@ -60,7 +68,7 @@
             echo "<label>Não passaram:</label> " . count($even)." tentativas<br/>";
             echo "<label>Tempo estimado:</label> ".(microtime(TRUE) - $InicialTime)." segundos<br/>";
             echo "<label>Uso da memória:</label> ".number_format((memory_get_usage() - $InicialMem) / (1024 * 1024),'10')." MB<br/>";
-
+        */
         ?>
 
     </body>
